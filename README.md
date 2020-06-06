@@ -33,10 +33,26 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+4. Make predictions: `./make_predictio.sh`
+5. Upload docker image: `upload_docker.sh`
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
+* Setup and Configure Docker locally `https://docs.docker.com/desktop/`
+* Setup and Configure Kubernetes locally `https://kubernetes.io/docs/tasks/tools/install-kubectl/`
+* Setup and Configure Minikube locally `https://kubernetes.io/docs/tasks/tools/install-minikube/`
+* Run `minikube start` to create a cluster
+* Run `kubectl config view` to check if the cluster is running
 * Run via kubectl
+
+### Details on files
+
+* `Makefile` Includes instructions on environment setup and lint tests
+* `requirements.txt` Contains all the dependencies
+* `app.py` Is the python flask app
+* `run_docker.sh` Builds the docker image and run it on the specified port
+* `run_kubernetes.sh` Runs the flask app via kubernetes
+* `make_predictio` Makes prediction for housing prices in Boston.
+* `upload_docker.sh` Uploads the docker image to the specify docker repository 
+* `.circleci/config.yml` Contains the configurations needed for the pipeline on circleci
+
