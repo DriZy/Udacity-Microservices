@@ -25,8 +25,8 @@ jobs:
             make install
             # # Install hadolint
             wget -c https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&
-            cp hadolint-Linux-x86_64  usr/local/bin/hadolint &&
-            chmod +x usr/local/bin/hadolint
+            cp hadolint-Linux-x86_64  /usr/local/bin/hadolint &&
+            chmod +x /usr/local/bin/hadolint
             pylint --version
       - save_cache:
           paths:
