@@ -24,9 +24,9 @@ keys:
 - run:
 name: install dependencies
 command: |
+sudo apt-get install gfortran libopenblas-dev liblapack-dev -y
 python3 -m venv venv
 . venv/bin/activate
-sudo apt-get install gfortran libopenblas-dev liblapack-dev -y
 make install
 # Install hadolint
 wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
