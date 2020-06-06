@@ -12,7 +12,6 @@ setup:
 
 install:
 	# This should be run from inside a virtualenv
-	sudo apt-get install gfortran libopenblas-dev liblapack-dev -y
 	pip install --upgrade pip &&\
 	pip install -r requirements.txt
 
